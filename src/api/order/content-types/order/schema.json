@@ -4,7 +4,8 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "Order"
+    "displayName": "Order",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,19 +15,13 @@
     "invoice_number": {
       "type": "string"
     },
-    "customer_id": {
+    "customer": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::customer.customer"
     },
     "total_price": {
       "type": "biginteger"
-    },
-    "order_details": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::order-detail.order-detail",
-      "mappedBy": "order"
     }
   }
 }
